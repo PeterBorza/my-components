@@ -1,0 +1,15 @@
+.button__style {
+  padding: 20px;
+  border: none;
+  outline: none;
+  background-color: mediumpurple;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  color: cyan;
+  &:hover {
+    color: rgba(69, 201, 201, 0.767);
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+}

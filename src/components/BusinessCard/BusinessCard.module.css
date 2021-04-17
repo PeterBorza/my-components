@@ -1,0 +1,53 @@
+.businessCard {
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.425);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.425);
+  padding: 5px;
+  width: 25%;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+}
+
+.businessCard:hover {
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+}
+
+.businessCard:hover img {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.businessCard img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  -webkit-transform: rotateY(30deg);
+          transform: rotateY(30deg);
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+}
+
+.businessCard p {
+  text-align: left;
+  padding-left: 3rem;
+}
+
+.businessCard span {
+  display: inline-block;
+  color: #275e6b;
+}
+/*# sourceMappingURL=BusinessCard.module.css.map */
