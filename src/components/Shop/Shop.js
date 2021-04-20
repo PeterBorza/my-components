@@ -1,6 +1,13 @@
-// import { useState, useEffect } from "react";
+import QuizBox from "../QuizBox/QuizBox";
+import { QuizContextProvider } from "../QuizBox/quiz-data";
 const Shop = () => {
-  return <h1>Shop Page</h1>;
+    return (
+        <div>
+            <QuizContextProvider>
+                <QuizBox />
+            </QuizContextProvider>
+        </div>
+    );
 };
 
 export default Shop;

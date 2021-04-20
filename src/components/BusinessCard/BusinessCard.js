@@ -12,31 +12,31 @@ import { useContext } from "react";
 const images = [baloons, deftones, Peter, wood];
 
 const BusinessCard = () => {
-  const { persons } = useContext(MyContext);
-  const { businessCard, container } = styles;
-  classNames(businessCard, container);
+    const { persons } = useContext(MyContext);
+    const { businessCard, container } = styles;
+    classNames(businessCard, container);
 
-  return (
-    <div className={container}>
-      {persons.map(({ name, age, occupation, id }, i) => (
-        <div key={id} className={businessCard}>
-          <img src={images[i]} alt="baloons" />
-          <h2>
-            <span>{name}</span>
-          </h2>
-          <p>
-            Age: <span>{age}</span>
-          </p>
-          <p>
-            Occupation: <span>{occupation}</span>
-          </p>
-          <p>
-            Id: <span>{id}</span>
-          </p>
+    return (
+        <div className={container}>
+            {persons.map(({ name, age, occupation, id }, i) => (
+                <div key={id} className={businessCard}>
+                    <img src={images[i]} alt="baloons" />
+                    <h2>
+                        <span>{name}</span>
+                    </h2>
+                    <p>
+                        Age: <span>{age}</span>
+                    </p>
+                    <p>
+                        Occupation: <span>{occupation}</span>
+                    </p>
+                    <p>
+                        Id: <span>{i + 1}</span>
+                    </p>
+                </div>
+            ))}
         </div>
-      ))}
-    </div>
-  );
+    );
 };
 
 export default BusinessCard;

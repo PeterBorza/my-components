@@ -1,47 +1,50 @@
 .App {
-  text-align: center;
-  display: grid;
-  place-items: center;
-  h1 {
-    color: red;
-    padding: 1rem;
-  }
+    text-align: center;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    // min-height: 100vh;
+    background-color: rgba(73, 56, 56, 0.522);
+    h1 {
+        color: red;
+        padding: 1rem;
+    }
 }
 
 nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(65, 75, 78);
-  color: white;
-  height: 8vh;
-  ul {
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    width: 30%;
-    li {
-      list-style: none;
+    align-items: center;
+    background-color: rgb(65, 75, 78);
+    color: white;
+    height: 8vh;
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 30%;
+        li {
+            list-style: none;
+        }
     }
-  }
 }
 .nav-links {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-  &:hover {
-    color: red;
-  }
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        color: red;
+    }
 }
 
 @media only screen and (max-width: 800px) {
-  nav {
-    ul {
-      width: 50%;
+    nav {
+        ul {
+            width: 50%;
+        }
     }
-  }
-  .nav-links {
-    font-size: 0.7rem;
-  }
+    .nav-links {
+        font-size: 0.7rem;
+    }
 }
