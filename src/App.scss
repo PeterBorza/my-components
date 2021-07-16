@@ -1,17 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .App {
-    text-align: center;
     display: grid;
     place-items: center;
     width: 100%;
-    // min-height: 100vh;
+    // height: 100vh;
     background-color: rgba(73, 56, 56, 0.522);
-    h1 {
-        color: red;
-        padding: 1rem;
-    }
+    overflow: hidden;
 }
 
 nav {
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-around;

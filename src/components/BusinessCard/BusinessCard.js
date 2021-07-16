@@ -12,13 +12,13 @@ import { useContext } from "react";
 const images = [baloons, deftones, Peter, wood];
 
 const BusinessCard = () => {
-    const { persons } = useContext(MyContext);
+    const { generalData } = useContext(MyContext);
     const { businessCard, container } = styles;
     classNames(businessCard, container);
 
     return (
         <div className={container}>
-            {persons.map(({ name, age, occupation, id }, i) => (
+            {generalData.persons.map(({ name, age, occupation, id }, i) => (
                 <div key={id} className={businessCard}>
                     <img src={images[i]} alt="baloons" />
                     <h2>
@@ -31,7 +31,7 @@ const BusinessCard = () => {
                         Occupation: <span>{occupation}</span>
                     </p>
                     <p>
-                        Id: <span>{i + 1}</span>
+                        Id: <span>{id}</span>
                     </p>
                 </div>
             ))}
