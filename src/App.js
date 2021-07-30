@@ -4,27 +4,24 @@ import Nav from "./components/Nav/Nav";
 import { MyContext } from "./MyContext";
 import { useContext } from "react";
 
-const renderRoutes = arr => arr.map(renderRoute);
-
-const renderRoute = item => {
-    return (
-        <Route
-            key={item.id}
-            path={item.path}
-            exact={item.exact}
-            component={item.component}
-        />
-    );
-};
-
 const App = () => {
     const { generalData } = useContext(MyContext);
+
     return (
         <Router>
             <div className="App">
-                <Nav />
+                <Nav logo="logo" />
             </div>
-            <Switch>{renderRoutes(generalData.routeMap)}</Switch>
+            <Switch>
+                {generalData.routeMap.map(item => (
+                    <Route
+                        key={item.id}
+                        path={item.path}
+                        exact={item.exact}
+                        component={item.component}
+                    />
+                ))}
+            </Switch>
         </Router>
     );
 };

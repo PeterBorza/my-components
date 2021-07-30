@@ -1,21 +1,24 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MyContext } from "../../MyContext";
-const Nav = () => {
+
+import styles from "./Nav.module.scss";
+
+const Nav = ({ logo }) => {
     const { generalData } = useContext(MyContext);
     const { routeMap } = generalData;
 
     const renderLink = item => (
         <li key={item.id}>
-            <Link className="nav-links" to={item.path}>
+            <Link className={styles.nav__links} to={item.path}>
                 {`${item.title}`}
             </Link>
         </li>
     );
 
     return (
-        <nav>
-            <h3>logo</h3>
+        <nav className={styles.nav}>
+            <h3>{logo}</h3>
             <ul>{routeMap.map(renderLink)}</ul>
         </nav>
     );

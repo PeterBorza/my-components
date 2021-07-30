@@ -5,7 +5,8 @@ import Login from "./components/Login/Login";
 import BusinessCard from "./components/BusinessCard/BusinessCard";
 import FruitCard from "./components/FruitCard/FruitCard";
 import Fruit from "./components/Fruit/Fruit";
-import Shop from "./components/Shop/Shop";
+import Quiz from "./components/Quiz/Quiz";
+import ArrayState from "./components/ArrayState/ArrayState";
 
 import apple from "./images/apple.jpg";
 import orange from "./images/orange.jpg";
@@ -119,8 +120,15 @@ export const MyContextProvider = ({ children }) => {
             },
             {
                 path: "/shop",
-                component: Shop,
+                component: Quiz,
                 title: "Quiz",
+                exact: false,
+                id: uuid(),
+            },
+            {
+                path: "/state",
+                component: ArrayState,
+                title: "state",
                 exact: false,
                 id: uuid(),
             },

@@ -1,9 +1,9 @@
 import QuizBox from "../QuizBox/QuizBox";
-import styles from "./Shop.module.scss";
+import styles from "./Quiz.module.scss";
 import { QuizContextProvider } from "../QuizBox/quiz-data";
-const Shop = () => {
+const Quiz = () => {
     return (
-        <div className={styles.shop_container}>
+        <div className={styles.quiz_container}>
             <QuizContextProvider>
                 <QuizBox />
             </QuizContextProvider>
@@ -11,4 +11,4 @@ const Shop = () => {
     );
 };
 
-export default Shop;
+export default Quiz;

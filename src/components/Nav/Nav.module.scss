@@ -1,0 +1,40 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(65, 75, 78);
+    color: white;
+    height: 8vh;
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 30%;
+        li {
+            list-style: none;
+        }
+    }
+    &__links {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .nav {
+        ul {
+            width: 50%;
+        }
+    }
+    &__links {
+        font-size: 0.7rem;
+    }
+}
