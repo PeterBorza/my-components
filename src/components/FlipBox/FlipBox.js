@@ -1,13 +1,18 @@
+import { useState } from 'react';
+import classNames from 'classnames';
+
 import styles from './FlipBox.module.scss';
 
-const { flip_box, __inner, __front, __back } = styles;
+const { flip_box, inner, front, back, __turn } = styles;
 
 const FlipBox = () => {
+	const [flip, setFlip] = useState(false);
+	const classes = classNames(inner, { [__turn]: flip });
 	return (
-		<div className={flip_box}>
-			<div className={__inner}>
-				<div className={__front}></div>
-				<div className={__back}></div>
+		<div className={flip_box} onClick={() => setFlip(!flip)}>
+			<div className={classes}>
+				<div className={front}></div>
+				<div className={back}></div>
 			</div>
 		</div>
 	);
