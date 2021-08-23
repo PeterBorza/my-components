@@ -1,13 +1,13 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 .App {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    // height: 100vh;
-    background-color: rgba(73, 56, 56, 0.522);
-    overflow: hidden;
+	display: grid;
+	place-items: center;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(73, 56, 56, 0.522);
+	overflow: hidden;
 }
