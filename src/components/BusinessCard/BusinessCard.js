@@ -18,7 +18,7 @@ const BusinessCard = () => {
 		<div className={container}>
 			{generalData.persons.map(({ name, age, occupation, id }, i) => (
 				<div key={id} className={businessCard}>
-					<img src={images[i]} alt='baloons' />
+					<img src={images[i]} alt='baloons' width='200px' />
 					<h2>
 						<span>{name}</span>
 					</h2>

@@ -1,13 +1,17 @@
 import { createContext, useState } from 'react';
 import { v1 as uuid } from 'uuid';
-import HomePage from './components/HomePage/HomePage';
-import Login from './components/Login/Login';
-import BusinessCard from './components/BusinessCard/BusinessCard';
-import FruitCard from './components/FruitCard/FruitCard';
-import Fruit from './components/Fruit/Fruit';
-import Quiz from './components/Quiz/Quiz';
-import ArrayState from './components/ArrayState/ArrayState';
-import FlipBox from './components/FlipBox';
+import {
+	HomePage,
+	Login,
+	BusinessCard,
+	FruitCard,
+	Fruit,
+	Quiz,
+	ArrayState,
+	FlipBox,
+	GlowButton,
+	SimpleDrop,
+} from './components';
 
 import apple from './images/apple.jpg';
 import orange from './images/orange.jpg';
@@ -129,7 +133,7 @@ export const MyContextProvider = ({ children }) => {
 			{
 				path: '/state',
 				component: ArrayState,
-				title: 'state',
+				title: 'State',
 				exact: false,
 				id: uuid(),
 			},
@@ -137,6 +141,20 @@ export const MyContextProvider = ({ children }) => {
 				path: '/flipbox',
 				component: FlipBox,
 				title: 'FlipBox',
+				exact: false,
+				id: uuid(),
+			},
+			{
+				path: '/glowbutton',
+				component: GlowButton,
+				title: 'Button',
+				exact: false,
+				id: uuid(),
+			},
+			{
+				path: '/simpledrop',
+				component: SimpleDrop,
+				title: 'Drop',
 				exact: false,
 				id: uuid(),
 			},

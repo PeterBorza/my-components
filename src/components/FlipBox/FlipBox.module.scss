@@ -1,10 +1,10 @@
+@use "../../css-files/mixins" as *;
+@use "../../css-files/variables" as *;
+
 .flip_box {
 	width: 300px;
 	height: 350px;
 	perspective: 1000px;
-	// &:hover .--inner {
-	// 	transform: rotateY(180deg);
-	// }
 }
 
 .inner {
@@ -13,7 +13,7 @@
 	height: 100%;
 	transform-style: preserve-3d;
 	transition: transform 0.5s;
-	&.__turn {
+	&.turn {
 		transform: rotateY(180deg);
 	}
 }
@@ -25,6 +25,7 @@
 	height: 100%;
 	background-color: #bf8c3f;
 	backface-visibility: hidden;
+	@include fCenter(column);
 }
 
 .back {

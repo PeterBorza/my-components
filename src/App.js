@@ -1,8 +1,9 @@
-import './App.scss';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Nav from './components/Nav/Nav';
-import { MyContext } from './MyContext';
 import { useContext } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { MyContext } from './MyContext';
+
+import { Nav } from './components';
+import './App.scss';
 
 const App = () => {
 	const { generalData } = useContext(MyContext);
