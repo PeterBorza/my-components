@@ -1,4 +1,5 @@
 import { useState, useContext } from 'react';
+import GlowButton from '../GlowButton';
 import { QuizContext } from '../QuizBox/quiz-data';
 import styles from './QuizBox.module.scss';
 
@@ -48,11 +49,11 @@ const QuizBox = () => {
 					</div>
 				</>
 			) : (
-				<div>
+				<div className={styles.score_box}>
 					<h1>
 						Your score is <span>{score}%</span>
 					</h1>
-					<button onClick={resetGame}>Try Again</button>
+					<GlowButton handler={() => resetGame()} title={'Reset'} />
 				</div>
 			)}
 		</div>

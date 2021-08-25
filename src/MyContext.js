@@ -145,13 +145,6 @@ export const MyContextProvider = ({ children }) => {
 				id: uuid(),
 			},
 			{
-				path: '/glowbutton',
-				component: GlowButton,
-				title: 'Button',
-				exact: false,
-				id: uuid(),
-			},
-			{
 				path: '/simpledrop',
 				component: SimpleDrop,
 				title: 'Drop',

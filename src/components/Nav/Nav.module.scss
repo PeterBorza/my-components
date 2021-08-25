@@ -1,37 +1,46 @@
+@use "../../css-files/mixins" as *;
+@use "../../css-files/variables" as *;
+
 .nav {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	@include fAround(row);
 	background-color: rgb(65, 75, 78);
 	color: white;
 	height: 8vh;
+	z-index: 1000;
 	ul {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
+		@include fAround(row);
 		width: 50%;
 		li {
 			list-style: none;
 		}
 	}
 	.nav__links {
-		color: white;
+		color: $myYellow2;
 		text-decoration: none;
 		cursor: pointer;
+		transition: color 50ms ease-in;
 		&:hover {
-			color: red;
+			color: #ecece6;
 		}
 	}
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 770px) {
 	.nav {
 		ul {
-			width: 50%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 20%;
+			height: 100%;
+			@include fAround(column);
+			justify-content: flex-start;
+			overflow-y: scroll;
+			padding-right: 5px;
 		}
 	}
 	.nav__links {
