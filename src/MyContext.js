@@ -9,11 +9,10 @@ import {
 	Quiz,
 	ArrayState,
 	FlipBox,
-	GlowButton,
 	SimpleDrop,
 } from './components';
 
-import apple from './images/apple.jpg';
+import apple from './images/apple400.jpg';
 import orange from './images/orange.jpg';
 import lemon from './images/lemon.jpg';
 import apricot from './images/apricots.jpg';
@@ -124,7 +123,7 @@ export const MyContextProvider = ({ children }) => {
 				id: uuid(),
 			},
 			{
-				path: '/shop',
+				path: '/quiz',
 				component: Quiz,
 				title: 'Quiz',
 				exact: false,

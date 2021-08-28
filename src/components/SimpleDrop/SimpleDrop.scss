@@ -10,7 +10,7 @@
 
 	.header {
 		position: absolute;
-		background-color: $bluebcg;
+		background-color: black;
 		left: 0;
 		top: 0;
 		width: 100%;
@@ -27,19 +27,17 @@
 	}
 	.content {
 		position: absolute;
-		// background-color: transparent;
-		background-color: rgb(41, 39, 39);
-		box-shadow: -2px -4px 8px rgba(255, 255, 255, 0.3),
-			3px 6px 8px rgba(0, 0, 0, 0.3);
 		left: 2%;
 		top: 8%;
 		width: 96%;
 		height: 100%;
-		@include fCenter(row);
 		transform: translateY(-115%);
 		transition: all 250ms ease;
 		&--drop {
 			transform: translateY(0%);
 		}
+	}
+	.white-bg {
+		background-color: white;
 	}
 }

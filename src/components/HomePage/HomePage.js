@@ -1,39 +1,22 @@
 import { Link } from 'react-router-dom';
-import { MyContext } from '../../MyContext';
-import { useContext } from 'react';
 import './HomePage.scss';
+import SimpleDrop from '../SimpleDrop';
+import { useContext } from 'react';
+import { MyContext } from '../../MyContext';
 
 const HomePage = () => {
-	const { counter, setCounter } = useContext(MyContext);
+	const { generalData } = useContext(MyContext);
 	return (
 		<div className='home-page'>
-			<h1>HomePage</h1>
-			<div className='content-menu'>
+			<SimpleDrop title='Menu' contentStyle='drop-content'>
 				<ul>
-					<li>
-						You must <Link to='/login'>login</Link> here
-					</li>
-					<li>
-						See my <Link to='/businesscard'>businesscard</Link> here
-					</li>
-					<li>
-						Have some <Link to='/fruitcard'>fruits</Link> here
-					</li>
-					<li>
-						Here is a <Link to='/quiz'>quiz</Link> for you
-					</li>
-					<li>
-						This <Link to='/flipbox'>flipbox</Link> is awesome
-					</li>
-					<li>
-						Check out this <Link to='/glowbutton'>button</Link>{' '}
-					</li>
-					<li>
-						Have a look at this{' '}
-						<Link to='/simpledrop'>dropdown</Link> over here
-					</li>
+					{generalData.routeMap.map(item => (
+						<li>
+							<Link to={item.path}>{item.title}</Link>
+						</li>
+					))}
 				</ul>
-			</div>
+			</SimpleDrop>
 		</div>
 	);
 };

@@ -5,41 +5,32 @@
 	width: 100%;
 	height: 100vh;
 	background-color: rgb(21, 19, 14);
-	@include fAround(column);
-	h1 {
-		color: white;
-	}
-}
-.content-menu {
-	width: 50%;
-	height: 30vh;
-	background-color: yellowgreen;
-	@include centered;
-	ul {
-		li {
-			font-size: 1.2rem;
-			a {
-				text-decoration: none;
-				font-size: 1.2rem;
-			}
-		}
-	}
+	background-image: url('../../images/wheels.jpg');
+	background-size: cover;
+	background-position: center;
+	// @include fCenter(row);
+	display: flex;
+	justify-content: flex-end;
+	padding: 5rem;
 }
 
-@media only screen and (max-width: 770px) {
-	.content-menu {
-		width: 70%;
-		height: 30vh;
-		background-color: yellowgreen;
-		@include centered;
-		ul {
-			li {
-				font-size: 1rem;
-				list-style: none;
-				line-height: 1.5;
-				a {
-					text-decoration: none;
-					font-size: 1rem;
+.drop-content {
+	width: 100%;
+	height: 100%;
+	ul {
+		background-color: $myYellow2;
+		padding: 3px;
+		li {
+			list-style: none;
+			margin: 0.2rem auto;
+			a {
+				text-decoration: none;
+				color: rgb(71, 64, 64);
+				text-transform: uppercase;
+				font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+					sans-serif;
+				&:hover {
+					color: rgb(141, 126, 126);
 				}
 			}
 		}
