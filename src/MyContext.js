@@ -10,16 +10,22 @@ import {
 	ArrayState,
 	FlipBox,
 	SimpleDrop,
+	HoverImage,
 } from './components';
 
 import apple from './images/apple400.jpg';
-import orange from './images/orange.jpg';
-import lemon from './images/lemon.jpg';
-import apricot from './images/apricots.jpg';
-import pear from './images/pear.jpg';
-import mango from './images/mango.jpg';
-import bananas from './images/bananas.jpg';
-import grapes from './images/grapes.jpg';
+import orange from './images/orange400.jpg';
+import lemon from './images/lemon400.jpg';
+import apricot from './images/apricots400.jpg';
+import pear from './images/pear400.jpg';
+import mango from './images/mango400.jpg';
+import bananas from './images/bananas400.jpg';
+import grapes from './images/grapes400.jpg';
+import baloons from './images/baloons400.jpg';
+import deftones from './images/deftones400.jpg';
+import Peter from './images/Peter400.jpg';
+import wood from './images/wood400.jpg';
+import wheels from './images/wheels400.jpg';
 
 export const MyContext = createContext(null);
 
@@ -30,24 +36,35 @@ export const MyContextProvider = ({ children }) => {
 				name: 'Baloon5',
 				age: '20',
 				occupation: 'musician/band',
+				photo: baloons,
 				id: uuid(),
 			},
 			{
 				name: 'Deftones',
 				age: '30',
 				occupation: 'musician/band',
+				photo: deftones,
 				id: uuid(),
 			},
 			{
 				name: 'Peter',
 				age: '42',
-				occupation: 'software developer intern',
+				occupation: 'frontend developer',
+				photo: Peter,
 				id: uuid(),
 			},
 			{
 				name: 'Woody Harrelson',
 				age: '65',
 				occupation: 'actor',
+				photo: wood,
+				id: uuid(),
+			},
+			{
+				name: 'Brainiac',
+				age: 'ageless',
+				occupation: 'brainer',
+				photo: wheels,
 				id: uuid(),
 			},
 		],
@@ -147,6 +164,13 @@ export const MyContextProvider = ({ children }) => {
 				path: '/simpledrop',
 				component: SimpleDrop,
 				title: 'Drop',
+				exact: false,
+				id: uuid(),
+			},
+			{
+				path: '/image',
+				component: HoverImage,
+				title: 'Image',
 				exact: false,
 				id: uuid(),
 			},

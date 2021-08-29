@@ -11,6 +11,7 @@ import Nav from './Nav/Nav';
 import Quiz from './Quiz/Quiz';
 import QuizBox from './QuizBox/QuizBox';
 import SimpleDrop from './SimpleDrop';
+import HoverImage from './HoverImage/HoverImage';
 
 export {
 	ArrayState,
@@ -26,4 +27,5 @@ export {
 	Quiz,
 	QuizBox,
 	SimpleDrop,
+	HoverImage,
 };

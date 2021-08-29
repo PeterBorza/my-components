@@ -1,21 +1,20 @@
-$bd: 1px solid black;
+@use "../../css-files/mixins" as *;
+@use "../../css-files/variables" as *;
+
 .container {
-	margin: 10vh auto;
+	margin: 8vh auto;
 	width: 100%;
 	height: 90vh;
 	perspective: 1000px;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 0.5rem;
-	// overflow: hidden;
+	@include RAM(300px, 1fr, 0.5);
 	padding: 0.5rem;
 }
 .businessCard {
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.425);
-	padding: 1rem;
-	height: 50vh;
+	height: 40vh;
+	@include fBetween(column);
+	padding-top: 5px;
 	border-radius: 5px;
-	text-align: center;
 	user-select: none;
 	transition: transform 250ms;
 	&:hover {
@@ -26,25 +25,27 @@ $bd: 1px solid black;
 		}
 	}
 	img {
-		max-height: 60%;
-		margin: 0 auto;
+		width: clamp(25%, 60px + 5vw, 45%);
 		transform: rotateY(10deg);
 		transition: transform 250ms;
 	}
-	p {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	span {
-		color: rgb(39, 94, 107);
-		text-transform: uppercase;
-	}
-}
-@media only screen and (max-width: 800px) {
-	.businessCard {
+
+	.infoContainer {
+		text-align: center;
+		width: 100%;
+		padding: 0.5rem;
+		border-top: $bd-white;
+		h2 {
+			color: rgb(39, 94, 107);
+		}
 		p {
-			font-size: 0.5rem;
+			@include fBetween(row);
+			font-size: clamp(0.5rem, 3vw, 1rem);
+		}
+		span {
+			color: rgb(39, 94, 107);
+			font-size: clamp(0.6rem, 3vw, 1rem);
+			text-transform: capitalize;
 		}
 	}
 }
