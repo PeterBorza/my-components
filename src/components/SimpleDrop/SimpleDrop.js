@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import './SimpleDrop.scss';
-// @ts-ignore
 import classNames from 'classnames';
 
 const SimpleDrop = ({ children, title, contentStyle }) => {
 	const [drop, setDrop] = useState(false);
-
 	const classes = classNames(
 		'content',
 		{
