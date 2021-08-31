@@ -11,7 +11,7 @@ const HomePage = () => {
 			<SimpleDrop title='Menu' contentStyle='drop-content'>
 				<ul>
 					{generalData.routeMap.map(item => (
-						<li>
+						<li key={item.id}>
 							<Link to={item.path}>{item.title}</Link>
 						</li>
 					))}
