@@ -2,11 +2,9 @@
 @use "../../css-files/variables" as *;
 
 .container {
-	margin: 8vh auto;
 	width: 100%;
-	height: 90vh;
-	perspective: 1000px;
-	@include RAM(300px, 1fr, 0.5);
+	// height: 90vh;
+	@include RAM(350px, 1fr, 0.5);
 	padding: 0.5rem;
 }
 .businessCard {

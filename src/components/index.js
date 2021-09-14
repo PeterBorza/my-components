@@ -11,6 +11,7 @@ import Nav from './Nav/Nav';
 import Quiz from './Quiz/Quiz';
 import QuizBox from './QuizBox/QuizBox';
 import SimpleDrop from './SimpleDrop';
+import { Neon } from './NeonButton';
 import HoverImage from './HoverImage/HoverImage';
 
 export {
@@ -27,5 +28,6 @@ export {
 	Quiz,
 	QuizBox,
 	SimpleDrop,
+	Neon,
 	HoverImage,
 };
