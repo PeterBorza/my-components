@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import './SimpleDrop.scss';
 import classNames from 'classnames';
 
-const SimpleDrop = ({ children, title, contentStyle }) => {
+const SimpleDrop = ({ children, title = 'Click', contentStyle }) => {
 	const [drop, setDrop] = useState(false);
 	const headerRef = useRef(null);
 	const classes = classNames(
@@ -18,7 +18,7 @@ const SimpleDrop = ({ children, title, contentStyle }) => {
 		window.addEventListener('click', e => {
 			e.target !== headerRef.current && setDrop(false);
 		});
-		return window.removeEventListener('click', setDrop(false));
+		return window.removeEventListener('click', () => {});
 	}, [headerRef, setDrop]);
 
 	return (
@@ -28,7 +28,7 @@ const SimpleDrop = ({ children, title, contentStyle }) => {
 				onClick={() => setDrop(!drop)}
 				ref={headerRef}
 			>
-				<h3>{title ? title : 'Click'}</h3>
+				<h3>{title}</h3>
 			</div>
 			<div className={classes}>{children}</div>
 		</div>
