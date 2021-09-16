@@ -1,11 +1,16 @@
-import { Link } from 'react-router-dom';
-import './HomePage.scss';
-import SimpleDrop from '../SimpleDrop';
 import { useContext } from 'react';
+
+import { Link } from 'react-router-dom';
+
+import './HomePage.scss';
+
+import SimpleDrop from '../SimpleDrop';
+
 import { MyContext } from '../../MyContext';
 
 const HomePage = () => {
 	const { generalData } = useContext(MyContext);
+
 	return (
 		<div className='home-page'>
 			<SimpleDrop title='Menu' contentStyle='drop-content'>
