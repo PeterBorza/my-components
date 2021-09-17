@@ -1,0 +1,28 @@
+@use "../../css-files/mixins" as *;
+@use "../../css-files/variables" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+.box {
+	width: 100%;
+	height: 100%;
+	outline: $bd-black;
+	@include centered;
+	background-color: black;
+	.box_h1 {
+		background: linear-gradient(white 45%, black);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 10rem;
+		font-weight: bolder;
+		font-family: 'Source Sans Pro', sans-serif;
+		text-transform: uppercase;
+		&:hover {
+			background: linear-gradient(white 35%, black);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			cursor: default;
+			user-select: none;
+		}
+	}
+}
