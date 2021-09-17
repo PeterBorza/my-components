@@ -1,0 +1,70 @@
+@use "../../css-files/mixins" as *;
+@use "../../css-files/variables" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+.container {
+	width: 100%;
+	height: 100vh;
+	@include centered;
+	transform-style: preserve-3d;
+	background-color: black;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	.inner_box {
+		position: absolute;
+		background-color: transparent;
+		box-shadow: 0 0 15px rgba(255, 255, 255, 0.664);
+		@include circle(10rem);
+		@include centered;
+		transform-style: preserve-3d;
+		overflow: hidden;
+		transform: translateX(-$w * 2);
+		animation: textbox 8s linear alternate-reverse infinite;
+		@keyframes textbox {
+			0% {
+				transform: X(-$w * 1.6);
+			}
+			100% {
+				transform: X($w * 1.6);
+			}
+		}
+		.text_span {
+			position: absolute;
+			color: #333;
+			text-transform: uppercase;
+			text-shadow: 2px 2px 10px black;
+			font-size: clamp(1.5rem, 3vw + 1rem, 6rem);
+			width: $w * 6;
+			transform: X(-$w);
+			text-align: center;
+			animation: text 8s linear alternate-reverse infinite;
+			@keyframes text {
+				from {
+					transform: X($w * 0.4);
+				}
+				to {
+					transform: X(-$w * 0.4);
+				}
+			}
+		}
+	}
+}
+
+.animate_span {
+	animation: shine 400ms infinite forwards linear;
+
+	@keyframes shine {
+		0%,
+		80% {
+			color: #333;
+			text-shadow: none;
+		}
+
+		100% {
+			color: white;
+			text-shadow: 0px 0px 10px white, 0px 0px 30px white,
+				0px 0px 60px white;
+		}
+	}
+}

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+$sansPro: 'Source Sans Pro', sans-serif;
 $bd-black: 1px solid black;
 $bd-green: 1px solid green;
 $bd-red: 1px solid red;
@@ -32,3 +35,28 @@ $blue: #298c93;
 $red: #c14242;
 $green: #2a5a24;
 $yellow: #bf8c3f;
+
+@function double($unit) {
+	@return $unit * 2;
+}
+@function pale($unit) {
+	@return rgba(0, 0, 0, $unit);
+}
+@function X($unit) {
+	@return translateX($unit);
+}
+@function Y($unit) {
+	@return translateY($unit);
+}
+@function Z($unit) {
+	@return translateZ($unit);
+}
+@function rX($unit) {
+	@return rotateX($unit);
+}
+@function rY($unit) {
+	@return rotateY($unit);
+}
+@function rZ($unit) {
+	@return rotateZ($unit);
+}

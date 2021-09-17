@@ -2,6 +2,9 @@ import ArrayState from './ArrayState/ArrayState';
 import BusinessCard from './BusinessCard/BusinessCard';
 import FlipBox from './FlipBox';
 import Fruit from './Fruit/Fruit';
+import GlowTextCircle from './GlowTextCircle/';
+import GradientText from './GradientText/';
+import Component from './Component/';
 import FruitCard from './FruitCard/FruitCard';
 import GlowButton from './GlowButton';
 import HomePage from './HomePage/HomePage';
@@ -30,4 +33,7 @@ export {
 	SimpleDrop,
 	Neon,
 	HoverImage,
+	GlowTextCircle,
+	GradientText,
+	Component,
 };

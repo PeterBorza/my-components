@@ -12,6 +12,9 @@ import {
 	FlipBox,
 	SimpleDrop,
 	HoverImage,
+	GlowTextCircle,
+	GradientText,
+	Component,
 } from './components';
 
 import apple from './images/apple400.jpg';
@@ -172,6 +175,27 @@ export const MyContextProvider = ({ children }) => {
 				path: '/image',
 				component: HoverImage,
 				title: 'Image',
+				exact: false,
+				id: uuid(),
+			},
+			{
+				path: '/text-in-circle',
+				component: GlowTextCircle,
+				title: 'Text',
+				exact: false,
+				id: uuid(),
+			},
+			{
+				path: '/gradient-text',
+				component: GradientText,
+				title: 'GradientText',
+				exact: false,
+				id: uuid(),
+			},
+			{
+				path: '/card',
+				component: Component,
+				title: 'Card',
 				exact: false,
 				id: uuid(),
 			},
