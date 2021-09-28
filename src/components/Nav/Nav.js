@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { MyContext } from '../../MyContext';
 import { Neon } from '../NeonButton';
-
+import { NavBar } from '../../platforms';
 import styles from './Nav.module.scss';
 
 const Nav = () => {
@@ -27,7 +27,7 @@ const Nav = () => {
 	};
 
 	return (
-		<nav className={styles.nav}>
+		<NavBar className={styles.nav}>
 			<div>
 				<Neon
 					title={'Start'}
@@ -37,7 +37,7 @@ const Nav = () => {
 				/>
 			</div>
 			<ul>{routeMap.map(renderLink)}</ul>
-		</nav>
+		</NavBar>
 	);
 };
 

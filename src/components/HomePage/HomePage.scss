@@ -1,5 +1,5 @@
-@use "../../css-files/mixins" as *;
-@use "../../css-files/variables" as *;
+@use '../../css-files/mixins' as *;
+@use '../../css-files/variables' as *;
 
 .home-page {
 	width: 100%;
@@ -8,10 +8,10 @@
 	background-image: url('../../images/wheels800.jpg');
 	background-size: cover;
 	background-position: center center;
-	// @include fCenter(row);
 	display: flex;
 	justify-content: flex-end;
 	padding: 5rem;
+	overflow: hidden;
 }
 
 .drop-content {

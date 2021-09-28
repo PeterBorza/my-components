@@ -1,16 +1,11 @@
-@use "../../css-files/mixins" as *;
-@use "../../css-files/variables" as *;
+@use '../../css-files/mixins' as *;
+@use '../../css-files/variables' as *;
 
 .nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
 	@include fAround(row);
 	background-color: rgb(65, 75, 78);
 	color: white;
 	height: 6vh;
-	z-index: 1000;
 	ul {
 		@include fAround(row);
 		width: 50%;
