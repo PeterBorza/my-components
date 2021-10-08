@@ -14,6 +14,7 @@ import {
 	HoverImage,
 	GlowTextCircle,
 	GradientText,
+	Rubik,
 } from './components';
 
 import apple from './images/apple400.jpg';
@@ -34,6 +35,7 @@ export const MyContext = createContext(null);
 
 export const MyContextProvider = ({ children }) => {
 	const generalData = {
+		images: [apple, orange, lemon, apricot, pear, mango, bananas, grapes],
 		persons: [
 			{
 				name: 'Baloon5',
@@ -192,6 +194,13 @@ export const MyContextProvider = ({ children }) => {
 				id: uuid(),
 			},
 			{
+				path: '/rubik',
+				component: Rubik,
+				title: 'Rubik',
+				exact: false,
+				id: uuid(),
+			},
+			{
 				path: '/fruits/:id',
 				component: Fruit,
 				title: '',
@@ -199,6 +208,30 @@ export const MyContextProvider = ({ children }) => {
 				id: uuid(),
 			},
 		],
+		rubikData: {
+			sideParts: [
+				'3E4E50',
+				'FACFAD',
+				'F8BD7F',
+				'F5AC72',
+				'F2AA7E',
+				'D8D4F2',
+				'C4B2BC',
+				'A29587',
+				'846C5B',
+			],
+			size: '150px',
+			transforms: function () {
+				return [
+					`translateZ(-${this.size})`,
+					`translateX(100%) rotateY(270deg) translateZ(${this.size})`,
+					`translateX(-100%) rotateY(90deg) translateZ(${this.size})`,
+					`rotateX(90deg) translateZ(${this.size})`,
+					` rotateX(270deg) translateZ(${this.size})`,
+					` translateZ(${this.size})`,
+				];
+			},
+		},
 	};
 
 	const [counter, setCounter] = useState(0);
