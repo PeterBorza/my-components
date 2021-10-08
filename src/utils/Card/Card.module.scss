@@ -1,0 +1,34 @@
+@use '../../css-files/mixins' as *;
+@use '../../css-files/variables' as *;
+
+.cardStyle {
+	width: 350px;
+	padding: 5px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	overflow: hidden;
+	@include shadow;
+	.titles {
+		display: flex;
+		justify-content: space-between;
+		color: rgb(94, 88, 88);
+		border-bottom: 1px solid rgb(151, 139, 139);
+		h2 {
+			text-transform: capitalize;
+			@include truncate(100%);
+			margin-bottom: 0.3rem;
+		}
+	}
+	i {
+		margin-left: auto;
+		&:hover {
+			color: rgb(124, 119, 119);
+		}
+	}
+	h3 {
+		@include truncate(100%);
+		padding: 10px 0;
+	}
+}

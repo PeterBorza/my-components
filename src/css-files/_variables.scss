@@ -36,6 +36,9 @@ $red: #c14242;
 $green: #2a5a24;
 $yellow: #bf8c3f;
 
+$shadow: 3px 3px 10px rgba(0, 0, 0, 0.3),
+	-2px -2px 10px rgba(255, 255, 255, 0.3);
+
 @function double($unit) {
 	@return $unit * 2;
 }

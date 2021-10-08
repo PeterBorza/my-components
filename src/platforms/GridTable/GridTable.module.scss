@@ -1,0 +1,10 @@
+.grid-layout-table {
+	width: 90%;
+	min-height: 90vh;
+	margin: auto;
+	background-color: rgb(139, 68, 206);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 0.5rem;
+	padding: 0.5rem;
+}
