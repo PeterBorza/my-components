@@ -13,6 +13,7 @@ import Nav from './Nav/Nav';
 import Quiz from './Quiz/Quiz';
 import QuizBox from './QuizBox/QuizBox';
 import SimpleDrop from './SimpleDrop';
+import Rubik from './Rubik';
 import { Neon } from './NeonButton';
 import HoverImage from './HoverImage/HoverImage';
 
@@ -34,4 +35,5 @@ export {
 	HoverImage,
 	GlowTextCircle,
 	GradientText,
+	Rubik,
 };
