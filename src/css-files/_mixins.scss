@@ -117,3 +117,18 @@
 	height: $unit;
 	border-radius: 50%;
 }
+
+@mixin shadow {
+	transition: box-shadow 150ms ease;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+	&:hover {
+		box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+	}
+}
+
+@mixin truncate($width) {
+	width: $width;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
