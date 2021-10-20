@@ -1,12 +1,14 @@
-import { useContext } from 'react';
+import { useContext } from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import './HomePage.scss';
+// import Loader from "../../images/Loader.png";
 
-import SimpleDrop from '../SimpleDrop';
+import "./HomePage.scss";
 
-import { MyContext } from '../../MyContext';
+import SimpleDrop from "../SimpleDrop";
+
+import { MyContext } from "../../MyContext";
 
 const HomePage = () => {
 	const { generalData } = useContext(MyContext);
@@ -22,6 +24,7 @@ const HomePage = () => {
 					))}
 				</ul>
 			</SimpleDrop>
+			{/* <img src={Loader} alt='code' /> */}
 		</div>
 	);
 };
