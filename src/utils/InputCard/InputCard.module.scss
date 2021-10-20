@@ -20,6 +20,19 @@ $buttonArrowSize: 1.2rem;
 	&:hover {
 		box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 	}
+	&__small {
+		width: 150px;
+		height: 1.5rem;
+	}
+	&__medium {
+		width: 300px;
+	}
+	&__large {
+		width: 400px;
+	}
+	&__xxl {
+		width: 500px;
+	}
 }
 
 .input-style {
