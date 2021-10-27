@@ -1,17 +1,17 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import styles from './Rubik.module.scss';
-import { MyContext } from '../../MyContext';
-import { GlowButton } from '..';
+import React, { useContext, useEffect, useRef, useState } from "react";
+import styles from "./Rubik.module.scss";
+import { MyContext } from "../../MyContext";
+import { GlowButton } from "..";
 
 const Rubik = () => {
 	const { generalData } = useContext(MyContext);
 	const { rubikData, images } = generalData;
 	const wrapper = useRef(null);
-	const [moveX, setMoveX] = useState('');
+	const [moveX, setMoveX] = useState("");
 
 	useEffect(() => {
 		wrapper.current.style.transform += moveX;
-		setMoveX('');
+		setMoveX("");
 	}, [moveX]);
 
 	const handleLeftRight = () => {

@@ -1,25 +1,30 @@
-import { useState, useEffect, useRef } from 'react';
-import './SimpleDrop.scss';
-import classNames from 'classnames';
+import { useState, useRef } from "react";
+import { useClickOutside } from "../../utils";
+import "./SimpleDrop.scss";
+import classNames from "classnames";
 
-const SimpleDrop = ({ children, title = 'Click', contentStyle }) => {
+const SimpleDrop = ({ children, title = "Click", contentStyle }) => {
 	const [drop, setDrop] = useState(false);
 	const headerRef = useRef(null);
 	const classes = classNames(
-		'content',
+		"content",
 		{
-			'content--drop': drop,
-			'white-bg': !contentStyle,
+			"content--drop": drop,
+			"white-bg": !contentStyle,
 		},
 		contentStyle
 	);
 
-	useEffect(() => {
-		window.addEventListener('click', e => {
-			e.target !== headerRef.current && setDrop(false);
-		});
-		return window.removeEventListener('click', () => {});
-	}, [headerRef, setDrop]);
+	// useEffect(() => {
+	// 	window.addEventListener("click", e => {
+	// 		e.target !== headerRef.current && setDrop(false);
+	// 	});
+	// 	return window.removeEventListener("click", () => {});
+	// }, []);
+
+	useClickOutside(headerRef, () => {
+		if (drop) setDrop(false);
+	});
 
 	return (
 		<div className='dropdown-container'>

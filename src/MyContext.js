@@ -1,5 +1,5 @@
-import { createContext, useState } from 'react';
-import { v1 as uuid } from 'uuid';
+import { createContext, useState } from "react";
+import { v1 as uuid } from "uuid";
 
 import {
 	HomePage,
@@ -15,21 +15,21 @@ import {
 	GlowTextCircle,
 	GradientText,
 	Rubik,
-} from './components';
+} from "./components";
 
-import apple from './images/apple400.jpg';
-import orange from './images/orange400.jpg';
-import lemon from './images/lemon400.jpg';
-import apricot from './images/apricots400.jpg';
-import pear from './images/pear400.jpg';
-import mango from './images/mango400.jpg';
-import bananas from './images/bananas400.jpg';
-import grapes from './images/grapes400.jpg';
-import baloons from './images/baloons400.jpg';
-import deftones from './images/deftones400.jpg';
-import peter from './images/peter400.jpg';
-import wood from './images/wood400.jpg';
-import wheels from './images/wheels400.jpg';
+import apple from "./images/apple400.jpg";
+import orange from "./images/orange400.jpg";
+import lemon from "./images/lemon400.jpg";
+import apricot from "./images/apricots400.jpg";
+import pear from "./images/pear400.jpg";
+import mango from "./images/mango400.jpg";
+import bananas from "./images/bananas400.jpg";
+import grapes from "./images/grapes400.jpg";
+import baloons from "./images/baloons400.jpg";
+import deftones from "./images/deftones400.jpg";
+import peter from "./images/Peter400.jpg";
+import wood from "./images/wood400.jpg";
+import wheels from "./images/wheels400.jpg";
 
 export const MyContext = createContext(null);
 
@@ -38,37 +38,37 @@ export const MyContextProvider = ({ children }) => {
 		images: [apple, orange, lemon, apricot, pear, mango, bananas, grapes],
 		persons: [
 			{
-				name: 'Baloon5',
-				age: '20',
-				occupation: 'musician/band',
+				name: "Baloon5",
+				age: "20",
+				occupation: "musician/band",
 				photo: baloons,
 				id: uuid(),
 			},
 			{
-				name: 'Deftones',
-				age: '30',
-				occupation: 'musician/band',
+				name: "Deftones",
+				age: "30",
+				occupation: "musician/band",
 				photo: deftones,
 				id: uuid(),
 			},
 			{
-				name: 'Peter',
-				age: '42',
-				occupation: 'frontend developer',
+				name: "Peter",
+				age: "42",
+				occupation: "frontend developer",
 				photo: peter,
 				id: uuid(),
 			},
 			{
-				name: 'Woody Harrelson',
-				age: '65',
-				occupation: 'actor',
+				name: "Woody Harrelson",
+				age: "65",
+				occupation: "actor",
 				photo: wood,
 				id: uuid(),
 			},
 			{
-				name: 'Brainiac',
-				age: 'ageless',
-				occupation: 'brainer',
+				name: "Brainiac",
+				age: "ageless",
+				occupation: "brainer",
 				photo: wheels,
 				id: uuid(),
 			},
@@ -76,151 +76,151 @@ export const MyContextProvider = ({ children }) => {
 		data: [
 			{
 				id: uuid(),
-				title: 'apple',
+				title: "apple",
 				source: apple,
 			},
 			{
 				id: uuid(),
-				title: 'orange',
+				title: "orange",
 				source: orange,
 			},
 			{
 				id: uuid(),
-				title: 'lemon',
+				title: "lemon",
 				source: lemon,
 			},
 			{
 				id: uuid(),
-				title: 'apricot',
+				title: "apricot",
 				source: apricot,
 			},
 			{
 				id: uuid(),
-				title: 'pear',
+				title: "pear",
 				source: pear,
 			},
 			{
 				id: uuid(),
-				title: 'mango',
+				title: "mango",
 				source: mango,
 			},
 			{
 				id: uuid(),
-				title: 'bananas',
+				title: "bananas",
 				source: bananas,
 			},
 			{
 				id: uuid(),
-				title: 'grapes',
+				title: "grapes",
 				source: grapes,
 			},
 		],
 		routeMap: [
 			{
-				path: '/',
+				path: "/",
 				component: HomePage,
-				title: 'Home',
+				title: "Home",
 				exact: true,
 				id: uuid(),
 			},
 			{
-				path: '/login',
+				path: "/login",
 				component: Login,
-				title: 'Login',
+				title: "Login",
 				exact: false,
 				id: uuid(),
 			},
 			{
-				path: '/businesscard',
+				path: "/businesscard",
 				component: BusinessCard,
-				title: 'Business-Card',
+				title: "Business-Card",
 				exact: false,
 				id: uuid(),
 			},
 			{
-				path: '/fruits',
+				path: "/fruits",
 				component: FruitCard,
-				title: 'Fruits',
+				title: "Fruits",
 				exact: true,
 				id: uuid(),
 			},
 			{
-				path: '/quiz',
+				path: "/quiz",
 				component: Quiz,
-				title: 'Quiz',
+				title: "Quiz",
 				exact: false,
 				id: uuid(),
 			},
 			{
-				path: '/state',
+				path: "/state",
 				component: ArrayState,
-				title: 'State',
+				title: "State",
 				exact: false,
 				id: uuid(),
 			},
 			{
-				path: '/flipbox',
+				path: "/flipbox",
 				component: FlipBox,
-				title: 'FlipBox',
+				title: "FlipBox",
 				exact: false,
 				id: uuid(),
 			},
 			{
-				path: '/simpledrop',
+				path: "/simpledrop",
 				component: SimpleDrop,
-				title: 'Drop',
+				title: "Drop",
 				exact: false,
 				id: uuid(),
 			},
 			{
-				path: '/image',
+				path: "/image",
 				component: HoverImage,
-				title: 'Image',
+				title: "Image",
 				exact: false,
 				id: uuid(),
 			},
 			{
-				path: '/text-in-circle',
+				path: "/text-in-circle",
 				component: GlowTextCircle,
-				title: 'Text',
+				title: "Text",
 				exact: false,
 				id: uuid(),
 			},
 			{
-				path: '/gradient-text',
+				path: "/gradient-text",
 				component: GradientText,
-				title: 'GradientText',
+				title: "GradientText",
 				exact: false,
 				id: uuid(),
 			},
 			{
-				path: '/rubik',
+				path: "/rubik",
 				component: Rubik,
-				title: 'Rubik',
+				title: "Rubik",
 				exact: false,
 				id: uuid(),
 			},
 			{
-				path: '/fruits/:id',
+				path: "/fruits/:id",
 				component: Fruit,
-				title: '',
+				title: "",
 				exact: false,
 				id: uuid(),
 			},
 		],
 		rubikData: {
 			sideParts: [
-				'3E4E50',
-				'FACFAD',
-				'F8BD7F',
-				'F5AC72',
-				'F2AA7E',
-				'D8D4F2',
-				'C4B2BC',
-				'A29587',
-				'846C5B',
+				"3E4E50",
+				"FACFAD",
+				"F8BD7F",
+				"F5AC72",
+				"F2AA7E",
+				"D8D4F2",
+				"C4B2BC",
+				"A29587",
+				"846C5B",
 			],
-			size: '150px',
+			size: "150px",
 			transforms: function () {
 				return [
 					`translateZ(-${this.size})`,
