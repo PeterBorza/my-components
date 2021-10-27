@@ -1,9 +1,9 @@
-import './HoverImage.scss';
-import classNames from 'classnames';
-import peter from '../../images/peter400.jpg';
+import "./HoverImage.scss";
+import classNames from "classnames";
+import peter from "../../images/Peter400.jpg";
 
 const HoverImage = ({ sourceImage, size }) => {
-	const imageStyle = classNames('outer-container', `image-size-${size}`);
+	const imageStyle = classNames("outer-container", `image-size-${size}`);
 	return (
 		<div className={imageStyle}>
 			<img

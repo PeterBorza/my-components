@@ -1,6 +1,6 @@
-import { box, box_h1 } from './GradientText.module.scss';
+import { box, box_h1 } from "./GradientText.module.scss";
 
-const GradientText = ({ animatedText = 'colorful' }) => {
+const GradientText = ({ animatedText = "colorful" }) => {
 	return (
 		<div className={box}>
 			<h1 className={box_h1}>{animatedText}</h1>
