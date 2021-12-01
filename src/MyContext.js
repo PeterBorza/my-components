@@ -27,7 +27,7 @@ import bananas from "./images/bananas400.jpg";
 import grapes from "./images/grapes400.jpg";
 import baloons from "./images/baloons400.jpg";
 import deftones from "./images/deftones400.jpg";
-import peter from "./images/Peter400.jpg";
+import peter from "./images/peter400.jpg";
 import wood from "./images/wood400.jpg";
 import wheels from "./images/wheels400.jpg";
 
